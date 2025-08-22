@@ -26,7 +26,24 @@ subgraphs: {}
 sqlModels: {}
 sqlSnapshots: {}
 sqlTests: {}
-sqlMacros: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2025-08-22 12:08:35'
+  .prophecy/metadata/sqlmacros/prophecy_tmp_source:
+    name: prophecy_tmp_source
+    macroType: expression
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - macros/prophecy_tmp_source.sql
+    createdAt: '2025-08-22 12:10:46'
 sqlSeeds: {}
 sqlSources: {}
 sqlUnreferencedSources: {}
@@ -41,3 +58,17 @@ flags:
   shouldAddDefaultDependenciesIfAbsent: false
 pipelineConfigurations: {}
 projectConfigurations: {}
+sqlOrchestratorPipelines:
+  .prophecy/metadata/sqlorchestratorpipeline/p1:
+    name: p1
+    schema: null
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/p1/p1__Aggregate_1.sql
+    - models/p1/schema.yml
+    - models/p1/p1__DataCleansing_1.sql
+    - .prophecy/ide/pipelines/p1.json
+    - pipelines/p1.py
+    createdAt: '2025-08-22 12:10:46'
+sqlBusinessApps: {}

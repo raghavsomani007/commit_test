@@ -1,0 +1,164 @@
+{
+  "id" : "p1",
+  "metainfo" : {
+    "label" : "p1",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    },
+    "sensorSchedule" : {
+      "enabled" : false,
+      "isDefaultView" : false,
+      "triggers" : { }
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv" : {
+      "id" : "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv",
+      "component" : "OrchestrationSource",
+      "kind" : "S3Source",
+      "metadata" : {
+        "label" : "OrchestrationSource_0",
+        "x" : -360,
+        "y" : -80,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "s3",
+          "properties" : { },
+          "type" : "connector"
+        },
+        "properties" : {
+          "fileOperationProperties" : {
+            "fileLoadingType" : "filepath",
+            "includeFileNameColumn" : true
+          }
+        },
+        "format" : {
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "",
+            "encoding" : "UTF-8",
+            "header" : true
+          },
+          "kind" : "csv",
+          "category" : "file"
+        },
+        "isNew" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b" : {
+      "id" : "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b",
+      "component" : "Aggregate",
+      "metadata" : {
+        "label" : "Aggregate_1",
+        "x" : -240,
+        "y" : -20,
+        "phase" : 0
+      },
+      "properties" : {
+        "aggregate" : [ ],
+        "allowSelection" : true,
+        "condition" : {
+          "expression" : ""
+        },
+        "activeTab" : "aggregate",
+        "columnsSelector" : [ ],
+        "groupBy" : [ ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "znEBZTeXfiC5LnykbfFdj$$xWb4wlaSdlmV4TluFJJxN",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "TitcyXksDZEMD-lckLpTo$$0QEEdddZIYvRpysAut2WF",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS" : {
+      "id" : "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS",
+      "component" : "DataCleansing",
+      "metadata" : {
+        "label" : "DataCleansing_1",
+        "x" : -240,
+        "y" : -240,
+        "phase" : 0
+      },
+      "properties" : {
+        "trimWhiteSpace" : false,
+        "replaceNullForNumericFields" : false,
+        "cleanLetters" : false,
+        "replaceNullTextWith" : "NA",
+        "removeRowNullAllCols" : false,
+        "replaceNullTextFields" : false,
+        "relation_name" : [ ],
+        "replaceNullDateWith" : "1970-01-01",
+        "columnNames" : [ ],
+        "replaceNullTimeFields" : false,
+        "replaceNullTimeWith" : "1970-01-01 00:00:00.0",
+        "schema" : "''",
+        "allWhiteSpace" : false,
+        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
+        "modifyCase" : "Keep original",
+        "cleanPunctuations" : false,
+        "replaceNullDateFields" : false,
+        "cleanNumbers" : false,
+        "replaceNullNumericWith" : 0
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "R3vXMWrU9HlcjXwG8t3eq$$fiYajHCC3ev6Z_zZhMb5K",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "HdE_WPVQ_PY6ySbMd7rcR$$ovdlKnh2Zh9QHJNhD2Gqj",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      },
+      "componentInfo" : {
+        "gemId" : "DataCleansing_DatabricksSqlBasics",
+        "name" : "DataCleansing",
+        "projectName" : "DatabricksSqlBasics",
+        "sourceProjectName" : "DatabricksSqlBasics",
+        "sourceProjectVersion" : "0.0.12"
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "d7MQJS6mzfhRj6l06HYhI$$E_-zghwnYRNMu6IR5Et5-",
+    "source" : "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv",
+    "sourcePort" : "cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
+    "target" : "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b",
+    "targetPort" : "znEBZTeXfiC5LnykbfFdj$$xWb4wlaSdlmV4TluFJJxN"
+  } ],
+  "component" : "Pipeline"
+}
