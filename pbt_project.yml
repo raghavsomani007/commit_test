@@ -44,7 +44,24 @@ sqlMacros:
     files:
     - macros/prophecy_tmp_source.sql
     createdAt: '2025-08-22 12:10:46'
-sqlSeeds: {}
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/s1:
+    name: s1
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+      - name: Last Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - seeds/s1.csv
+    createdAt: '2025-08-22 12:16:05'
 sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline:

@@ -27,6 +27,37 @@
     "isTranspiledPipeline" : false
   },
   "processes" : {
+    "-yEpnIIFdA7gyECmeFfXI" : {
+      "id" : "-yEpnIIFdA7gyECmeFfXI",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "s1",
+        "x" : 3.4000000953674316,
+        "y" : -399.6000061035156,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GdqZMWEhWasd45eIM4Cyi",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "ir9aX7uq8aO0RnLU0G323",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS" : {
       "id" : "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS",
       "component" : "Model",

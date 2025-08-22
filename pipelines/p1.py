@@ -2,6 +2,12 @@ Schedule = Schedule(cron = "* 0 2 * * * *", timezone = "GMT", emails = ["email@g
 SensorSchedule = SensorSchedule(enabled = False)
 
 with DAG(Schedule = Schedule, SensorSchedule = SensorSchedule):
+    s1 = Task(
+        task_id = "s1", 
+        component = "Dataset", 
+        writeOptions = {"writeMode" : "overwrite"}, 
+        table = {"name" : "s1", "sourceType" : "Seed", "alias" : ""}
+    )
     p1__DataCleansing_1 = Task(task_id = "p1__DataCleansing_1", component = "Model", modelName = "p1__DataCleansing_1")
     p1__Aggregate_1 = Task(task_id = "p1__Aggregate_1", component = "Model", modelName = "p1__Aggregate_1")
     OrchestrationSource_0 = SourceTask(

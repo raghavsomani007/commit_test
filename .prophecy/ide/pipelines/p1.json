@@ -151,6 +151,52 @@
         "sourceProjectName" : "DatabricksSqlBasics",
         "sourceProjectVersion" : "0.0.12"
       }
+    },
+    "-yEpnIIFdA7gyECmeFfXI" : {
+      "id" : "-yEpnIIFdA7gyECmeFfXI",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "s1",
+        "x" : 3.4000000953674316,
+        "y" : -399.6000061035156,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GdqZMWEhWasd45eIM4Cyi",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "ir9aX7uq8aO0RnLU0G323",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "First Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Last Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
     }
   },
   "connections" : [ {
