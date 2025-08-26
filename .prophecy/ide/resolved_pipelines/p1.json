@@ -53,6 +53,53 @@
         } ],
         "outputs" : [ {
           "id" : "ir9aX7uq8aO0RnLU0G323",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "First Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "Last Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "geKwf4r8BzVgJWNfOmWFE" : {
+      "id" : "geKwf4r8BzVgJWNfOmWFE",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "catalog_tags",
+        "x" : -327.20001220703125,
+        "y" : -498.79998779296875,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "catalog_tags",
+          "sourceType" : "Table",
+          "sourceName" : "raghav.information_schema",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xL03WqpQu3XUWiJvjr8hW",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "32NxoCPk6AbEd9YNJ5s68",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -172,12 +219,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "input_port_1",
-          "slug" : "input_port_1"
+          "id" : "input_port_0",
+          "slug" : "input_port_0"
         } ],
         "outputs" : [ {
-          "id" : "output_port_1",
-          "slug" : "output_port_1"
+          "id" : "output_port_0",
+          "slug" : "output_port_0"
         } ],
         "isCustomOutputSchema" : false
       }
@@ -188,11 +235,11 @@
     "source" : "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv",
     "sourcePort" : "cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
     "target" : "OrchestrationSource_0_cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
-    "targetPort" : "input_port_1"
+    "targetPort" : "input_port_0"
   }, {
     "id" : "conn_OrchestrationSource_0_cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad_03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b_znEBZTeXfiC5LnykbfFdj$$xWb4wlaSdlmV4TluFJJxN",
     "source" : "OrchestrationSource_0_cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
-    "sourcePort" : "output_port_1",
+    "sourcePort" : "output_port_0",
     "target" : "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b",
     "targetPort" : "p1__Aggregate_1_in_0"
   } ],

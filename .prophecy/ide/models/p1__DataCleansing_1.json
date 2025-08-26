@@ -37,12 +37,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "input_port_0",
-          "slug" : "input_port_0"
+          "id" : "input_port_2",
+          "slug" : "input_port_2"
         } ],
         "outputs" : [ {
-          "id" : "output_port_0",
-          "slug" : "output_port_0"
+          "id" : "output_port_2",
+          "slug" : "output_port_2"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -97,7 +97,7 @@
     "source" : "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS",
     "sourcePort" : "HdE_WPVQ_PY6ySbMd7rcR$$ovdlKnh2Zh9QHJNhD2Gqj",
     "target" : "DataCleansing_1_HdE_WPVQ_PY6ySbMd7rcR$$ovdlKnh2Zh9QHJNhD2Gqj",
-    "targetPort" : "input_port_0"
+    "targetPort" : "input_port_2"
   } ],
   "component" : "Model"
 }

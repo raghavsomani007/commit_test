@@ -1,0 +1,10 @@
+---
+version: 2
+sources:
+- name: "raghav.information_schema"
+  database: "raghav"
+  schema: "information_schema"
+  tables:
+  - name: "catalog_tags"
+    columns: []
+    type: "table"

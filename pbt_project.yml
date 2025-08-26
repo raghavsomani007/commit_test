@@ -43,6 +43,7 @@ sqlMacros:
     author: somani.raghav@prophecy.io
     files:
     - macros/prophecy_tmp_source.sql
+    - .prophecy/ide/macros/prophecy_tmp_source.json
     createdAt: '2025-08-22 12:10:46'
 sqlSeeds:
   .prophecy/metadata/sqlseeds/s1:
@@ -62,7 +63,24 @@ sqlSeeds:
     files:
     - seeds/s1.csv
     createdAt: '2025-08-22 12:16:05'
-sqlSources: {}
+sqlSources:
+  .prophecy/metadata/sqlsources/raghav_information_schema:
+    name: raghav.information_schema
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - prophecy-sources/sources.yml
+    createdAt: '2025-08-26 13:39:31'
+    tables:
+    - name: catalog_tags
+      schema:
+        entityType: ''
+        providerType: databricks
+        fields: []
+      description: null
+      author: somani.raghav@prophecy.io
+      createdAt: '2025-08-26 13:39:31'
+      tableType: table
 sqlUnreferencedSources: {}
 sqlPipeline:
   name: sqlPipeline
@@ -83,8 +101,8 @@ sqlOrchestratorPipelines:
     author: somani.raghav@prophecy.io
     files:
     - models/p1/p1__Aggregate_1.sql
-    - models/p1/schema.yml
     - models/p1/p1__DataCleansing_1.sql
+    - models/p1/schema.yml
     - .prophecy/ide/pipelines/p1.json
     - pipelines/p1.py
     createdAt: '2025-08-22 12:10:46'

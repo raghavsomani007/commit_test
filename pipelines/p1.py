@@ -8,6 +8,12 @@ with DAG(Schedule = Schedule, SensorSchedule = SensorSchedule):
         writeOptions = {"writeMode" : "overwrite"}, 
         table = {"name" : "s1", "sourceType" : "Seed", "alias" : ""}
     )
+    catalog_tags = Task(
+        task_id = "catalog_tags", 
+        component = "Dataset", 
+        writeOptions = {"writeMode" : "overwrite"}, 
+        table = {"name" : "catalog_tags", "sourceType" : "Table", "sourceName" : "raghav.information_schema", "alias" : ""}
+    )
     p1__DataCleansing_1 = Task(task_id = "p1__DataCleansing_1", component = "Model", modelName = "p1__DataCleansing_1")
     p1__Aggregate_1 = Task(task_id = "p1__Aggregate_1", component = "Model", modelName = "p1__Aggregate_1")
     OrchestrationSource_0 = SourceTask(
@@ -32,5 +38,5 @@ with DAG(Schedule = Schedule, SensorSchedule = SensorSchedule):
         label = "OrchestrationSource_0", 
         table = {"name" : "{{ prophecy_tmp_source('p1', 'OrchestrationSource_0') }}", "sourceType" : "UnreferencedSource"}
     )
-    OrchestrationSource_0.out >> OrchestrationSource_0.input_port_1
-    OrchestrationSource_0.output_port_1 >> p1__Aggregate_1.in_0
+    OrchestrationSource_0.out >> OrchestrationSource_0.input_port_0
+    OrchestrationSource_0.output_port_0 >> p1__Aggregate_1.in_0
