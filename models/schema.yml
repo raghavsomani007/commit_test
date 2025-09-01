@@ -1,0 +1,69 @@
+---
+version: 2
+models:
+- name: "m1"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m2"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m4"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m3"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m5"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m10"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m6"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m7"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []

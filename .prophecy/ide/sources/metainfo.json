@@ -20,6 +20,30 @@
       "https://github.com/prophecy-io/databricks-sql-basics" : "12"
     }
   },
-  "entitiesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "m10",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m3",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m4",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m5",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m6",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m7",
+    "type" : "Model",
+    "syncedOnce" : true
+  } ],
   "frontEndLanguage" : "sql"
 }

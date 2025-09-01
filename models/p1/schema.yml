@@ -7,3 +7,6 @@ models:
 - name: "p1__DataCleansing_1"
   tags:
   - "prophecy_temp"
+- name: "p1__g1_1"
+  tags:
+  - "prophecy_temp"

@@ -23,10 +23,208 @@ functions:
   airflowFunctions: {}
   businessRules: {}
 subgraphs: {}
-sqlModels: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/m3:
+    name: m3
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m3.sql
+    - .prophecy/ide/models/m3.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 01:27:48'
+  .prophecy/metadata/sqlmodels/m7:
+    name: m7
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: '123'
+        dataType:
+          type: Integer
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m7.sql
+    - .prophecy/ide/models/m7.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 08:52:29'
+  .prophecy/metadata/sqlmodels/m6:
+    name: m6
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: '123'
+        dataType:
+          type: Integer
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m6.sql
+    - .prophecy/ide/models/m6.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 08:43:59'
+  .prophecy/metadata/sqlmodels/m5:
+    name: m5
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m5.sql
+    - .prophecy/ide/models/m5.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 07:43:22'
+  .prophecy/metadata/sqlmodels/m10:
+    name: m10
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: '456'
+        dataType:
+          type: Integer
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m10.sql
+    - .prophecy/ide/models/m10.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 08:25:55'
+  .prophecy/metadata/sqlmodels/m4:
+    name: m4
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m4.sql
+    - .prophecy/ide/models/m4.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-29 07:23:31'
+  .prophecy/metadata/sqlmodels/m2:
+    name: m2
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m2.sql
+    - .prophecy/ide/models/m2.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-28 04:08:39'
+  .prophecy/metadata/sqlmodels/m1:
+    name: m1
+    schema:
+      entityType: ''
+      providerType: Databricks
+      fields:
+      - name: First Name
+        dataType:
+          type: String
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - models/m1.sql
+    - .prophecy/ide/models/m1.json
+    - models/schema.yml
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-08-27 09:56:55'
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
+  .prophecy/metadata/sqlmacros/g1:
+    name: g1
+    macroType: query
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - macros/g2.sql
+    - .prophecy/ide/macros/g1.json
+    - macros/macros.yml
+    - gems/g1.py
+    createdAt: '2025-09-01 09:26:47'
+  .prophecy/metadata/sqlmacros/g2:
+    name: g2
+    macroType: query
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - macros/g2.sql
+    - .prophecy/ide/macros/g2.json
+    - macros/macros.yml
+    - gems/g2.py
+    createdAt: '2025-09-01 09:12:13'
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
     macroType: expression
@@ -103,6 +301,7 @@ sqlOrchestratorPipelines:
     - models/p1/p1__Aggregate_1.sql
     - models/p1/p1__DataCleansing_1.sql
     - models/p1/schema.yml
+    - models/p1/p1__g1_1.sql
     - .prophecy/ide/pipelines/p1.json
     - pipelines/p1.py
     createdAt: '2025-08-22 12:10:46'

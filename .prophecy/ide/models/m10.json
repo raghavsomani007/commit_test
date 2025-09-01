@@ -1,0 +1,83 @@
+{
+  "id" : "m10",
+  "metainfo" : {
+    "label" : "m10",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "m10##JSRj8HqP" : {
+      "id" : "m10##JSRj8HqP",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "m10",
+        "x" : 20,
+        "y" : 0,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : false,
+        "customQuery" : true,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT 456\n\nFROM s1\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Lcha7Avd",
+          "slug" : "s1"
+        } ],
+        "outputs" : [ {
+          "id" : "qdsay5YD",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "cuMWBcEwMPW85YGm8RtzG" : {
+      "id" : "cuMWBcEwMPW85YGm8RtzG",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "s1",
+        "slug" : "s1",
+        "x" : -180,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "Esfy4W_711CfT7YysqX4j",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "gbgYYMf820ab2WGYK7eVw$$fTzIAYfq_4V-bqkmiaNHb",
+    "source" : "cuMWBcEwMPW85YGm8RtzG",
+    "sourcePort" : "Esfy4W_711CfT7YysqX4j",
+    "target" : "m10##JSRj8HqP",
+    "targetPort" : "Lcha7Avd"
+  } ],
+  "component" : "Model"
+}

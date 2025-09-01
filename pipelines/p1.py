@@ -2,6 +2,7 @@ Schedule = Schedule(cron = "* 0 2 * * * *", timezone = "GMT", emails = ["email@g
 SensorSchedule = SensorSchedule(enabled = False)
 
 with DAG(Schedule = Schedule, SensorSchedule = SensorSchedule):
+    p1__g1_1 = Task(task_id = "p1__g1_1", component = "Model", modelName = "p1__g1_1")
     s1 = Task(
         task_id = "s1", 
         component = "Dataset", 
@@ -31,6 +32,12 @@ with DAG(Schedule = Schedule, SensorSchedule = SensorSchedule):
           header = True
         ), 
         fileOperationProperties = {"fileLoadingType" : "filepath", "includeFileNameColumn" : True}
+    )
+    s1_1 = Task(
+        task_id = "s1_1", 
+        component = "Dataset", 
+        writeOptions = {"writeMode" : "overwrite"}, 
+        table = {"name" : "s1", "sourceType" : "Seed", "alias" : ""}
     )
     OrchestrationSource_0 = Task(
         task_id = "OrchestrationSource_0", 
