@@ -179,8 +179,8 @@
       "component" : "Except",
       "metadata" : {
         "label" : "Except_1",
-        "x" : -700,
-        "y" : -800,
+        "x" : -720,
+        "y" : -440,
         "phase" : 0
       },
       "properties" : {
