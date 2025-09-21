@@ -14,6 +14,43 @@
     "path" : "",
     "editable" : true
   },
+  "externalSources" : {
+    "type" : "Project",
+    "name" : "",
+    "children" : [ {
+      "type" : "Catalog",
+      "name" : "hive_metastore",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "maciej",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "main",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "qa_performance",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "raghav",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "samples",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "system",
+      "children" : [ ]
+    }, {
+      "type" : "Catalog",
+      "name" : "uw2_share",
+      "children" : [ ]
+    } ]
+  },
   "dependenciesContainer" : {
     "dependencies" : { },
     "prophecyProjectDependencies" : {

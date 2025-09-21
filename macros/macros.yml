@@ -22,3 +22,24 @@ macros:
     type: "value"
     description: "{\"ProphecyType\": \"value\"}"
   macroType: "query"
+- name: "hello"
+  arguments: []
+  macroType: "expression"
+- name: "g3"
+  arguments:
+  - name: "parameter1"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"
+- name: "g4"
+  arguments:
+  - name: "parameter1"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"
+- name: "g234"
+  arguments:
+  - name: "table_name1"
+    type: "value"
+    description: "{\"ProphecyType\": \"value\"}"
+  macroType: "query"

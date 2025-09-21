@@ -1,0 +1,154 @@
+{
+  "id" : "p1__Reformat_1",
+  "metainfo" : {
+    "label" : "p1__Reformat_1",
+    "autoLayout" : true,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "materialized" : "ephemeral",
+        "database" : "\"raghav\"",
+        "schema" : "\"default\"",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "Reformat_1_8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t" : {
+      "id" : "Reformat_1_8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "Reformat_1"
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "\nSELECT *\n\nFROM Reformat_1\n\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_1",
+          "slug" : "input_port_1"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_1",
+          "slug" : "output_port_1"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq" : {
+      "id" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "Reformat_1",
+        "x" : -240,
+        "y" : -520,
+        "phase" : 0
+      },
+      "properties" : {
+        "columnsSelector" : [ "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z##First Name" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "`First Name`"
+          },
+          "alias" : "`First Name`",
+          "_row_id" : "NrKVUSSXto"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('arrstr') }}"
+          },
+          "alias" : "c2",
+          "_row_id" : "GdQQhFrusD"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "ZaqpebQlUejl4rjRtYS0Z" : {
+      "id" : "ZaqpebQlUejl4rjRtYS0Z",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "s1",
+        "x" : -300,
+        "y" : -200,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "i-OLuaXw8oIbJhTdt8EQW",
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ {
+                "lhs" : {
+                  "type" : "Field",
+                  "value" : "First Name"
+                },
+                "type" : "Binary",
+                "op" : "=",
+                "rhs" : {
+                  "type" : "Literal",
+                  "value" : "'hello'"
+                }
+              } ]
+            }
+          }
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "conn_lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq_Reformat_1_8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+    "source" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
+    "sourcePort" : "8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+    "target" : "Reformat_1_8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+    "targetPort" : "input_port_1"
+  }, {
+    "id" : "gduqIC6CUSMd-jxYlMn2Y",
+    "source" : "ZaqpebQlUejl4rjRtYS0Z",
+    "sourcePort" : "i-OLuaXw8oIbJhTdt8EQW",
+    "target" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
+    "targetPort" : "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z"
+  } ],
+  "component" : "Model"
+}

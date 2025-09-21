@@ -7,7 +7,17 @@
     "configuration" : {
       "schema" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "arrstr",
+          "kind" : {
+            "type" : "array",
+            "elementType" : {
+              "type" : "string",
+              "value" : null
+            },
+            "value" : [ "'hello'", "'yellow'" ]
+          }
+        } ]
       }
     },
     "schedule" : {
@@ -27,48 +37,13 @@
     "isTranspiledPipeline" : false
   },
   "processes" : {
-    "Pz5TR5XApDIlOb0vEUUJx$$N2tTy5tCsCPMsVnDOeOnO" : {
-      "id" : "Pz5TR5XApDIlOb0vEUUJx$$N2tTy5tCsCPMsVnDOeOnO",
-      "component" : "g1",
-      "metadata" : {
-        "label" : "g1_1",
-        "x" : -560,
-        "y" : -320,
-        "phase" : 0
-      },
-      "properties" : {
-        "table_name" : "ref('s1'",
-        "_oldMacroProperties" : {
-          "macroName" : "g1",
-          "projectName" : "test",
-          "parameters" : [ {
-            "name" : "table_name",
-            "value" : "ref('s1'"
-          } ]
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "rH23EGQ4Sq-3jBE8dJhbs$$wDN-ZU1szd3f6Y__1XYK5",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      },
-      "componentInfo" : {
-        "gemId" : "g1_test",
-        "name" : "g1",
-        "projectName" : "test",
-        "sourceProjectName" : "test"
-      }
-    },
-    "-yEpnIIFdA7gyECmeFfXI" : {
-      "id" : "-yEpnIIFdA7gyECmeFfXI",
+    "ZaqpebQlUejl4rjRtYS0Z" : {
+      "id" : "ZaqpebQlUejl4rjRtYS0Z",
       "component" : "Dataset",
       "metadata" : {
         "label" : "s1",
-        "x" : 0,
-        "y" : -400,
+        "x" : -300,
+        "y" : -200,
         "phase" : 0
       },
       "properties" : {
@@ -83,11 +58,11 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "GdqZMWEhWasd45eIM4Cyi",
+          "id" : "b3wVHGDBckrl1wsCEImCN",
           "slug" : "in"
         } ],
         "outputs" : [ {
-          "id" : "ir9aX7uq8aO0RnLU0G323",
+          "id" : "i-OLuaXw8oIbJhTdt8EQW",
           "schema" : {
             "entityType" : "",
             "providerType" : "Databricks",
@@ -103,199 +78,60 @@
               }
             } ]
           },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "geKwf4r8BzVgJWNfOmWFE" : {
-      "id" : "geKwf4r8BzVgJWNfOmWFE",
-      "component" : "Dataset",
-      "metadata" : {
-        "label" : "catalog_tags",
-        "x" : -420,
-        "y" : -540,
-        "phase" : 0
-      },
-      "properties" : {
-        "writeOptions" : {
-          "writeMode" : "overwrite"
-        },
-        "table" : {
-          "name" : "catalog_tags",
-          "sourceType" : "Table",
-          "sourceName" : "raghav.information_schema",
-          "alias" : ""
-        }
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "xL03WqpQu3XUWiJvjr8hW",
-          "slug" : "in"
-        } ],
-        "outputs" : [ {
-          "id" : "32NxoCPk6AbEd9YNJ5s68",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "databricks",
-            "fields" : [ ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS" : {
-      "id" : "R9DM1gTaaZuXco4ELezna$$KQS2-2whjw-7_-87AIPdS",
-      "component" : "DataCleansing",
-      "metadata" : {
-        "label" : "DataCleansing_1",
-        "x" : -240,
-        "y" : -240,
-        "phase" : 0
-      },
-      "properties" : {
-        "trimWhiteSpace" : false,
-        "replaceNullForNumericFields" : false,
-        "cleanLetters" : false,
-        "replaceNullTextWith" : "NA",
-        "removeRowNullAllCols" : false,
-        "replaceNullTextFields" : false,
-        "relation_name" : [ ],
-        "replaceNullDateWith" : "1970-01-01",
-        "columnNames" : [ ],
-        "replaceNullTimeFields" : false,
-        "replaceNullTimeWith" : "1970-01-01 00:00:00.0",
-        "schema" : "''",
-        "allWhiteSpace" : false,
-        "removeTabsLineBreaksAndDuplicateWhitespace" : false,
-        "modifyCase" : "Keep original",
-        "cleanPunctuations" : false,
-        "replaceNullDateFields" : false,
-        "cleanNumbers" : false,
-        "replaceNullNumericWith" : 0
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "R3vXMWrU9HlcjXwG8t3eq$$fiYajHCC3ev6Z_zZhMb5K",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "HdE_WPVQ_PY6ySbMd7rcR$$ovdlKnh2Zh9QHJNhD2Gqj",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      },
-      "componentInfo" : {
-        "gemId" : "DataCleansing_DatabricksSqlBasics",
-        "name" : "DataCleansing",
-        "projectName" : "DatabricksSqlBasics",
-        "sourceProjectName" : "DatabricksSqlBasics",
-        "sourceProjectVersion" : "0.0.12"
-      }
-    },
-    "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b" : {
-      "id" : "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b",
-      "component" : "Aggregate",
-      "metadata" : {
-        "label" : "Aggregate_1",
-        "x" : -240,
-        "y" : -20,
-        "phase" : 0
-      },
-      "properties" : {
-        "aggregate" : [ ],
-        "allowSelection" : true,
-        "condition" : {
-          "expression" : ""
-        },
-        "activeTab" : "aggregate",
-        "columnsSelector" : [ ],
-        "groupBy" : [ ]
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "znEBZTeXfiC5LnykbfFdj$$xWb4wlaSdlmV4TluFJJxN",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "TitcyXksDZEMD-lckLpTo$$0QEEdddZIYvRpysAut2WF",
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false
-      }
-    },
-    "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv" : {
-      "id" : "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv",
-      "component" : "OrchestrationSource",
-      "kind" : "S3Source",
-      "metadata" : {
-        "label" : "OrchestrationSource_0",
-        "x" : -360,
-        "y" : -80,
-        "phase" : 0
-      },
-      "properties" : {
-        "connector" : {
-          "kind" : "s3",
-          "properties" : { },
-          "type" : "connector"
-        },
-        "properties" : {
-          "fileOperationProperties" : {
-            "fileLoadingType" : "filepath",
-            "includeFileNameColumn" : true
+          "slug" : "out",
+          "dataExplorerProps" : {
+            "sorts" : [ ],
+            "filter" : {
+              "type" : "Composite",
+              "op" : {
+                "type" : "AND"
+              },
+              "filters" : [ {
+                "lhs" : {
+                  "type" : "Field",
+                  "value" : "First Name"
+                },
+                "type" : "Binary",
+                "op" : "=",
+                "rhs" : {
+                  "type" : "Literal",
+                  "value" : "'hello'"
+                }
+              } ]
+            }
           }
-        },
-        "format" : {
-          "properties" : {
-            "allowLazyQuotes" : false,
-            "allowEmptyColumnNames" : true,
-            "separator" : ",",
-            "nullValue" : "",
-            "encoding" : "UTF-8",
-            "header" : true
-          },
-          "kind" : "csv",
-          "category" : "file"
-        },
-        "isNew" : true
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
-          "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
     },
-    "6GvtWcDNnJngdKzx3AWbQ" : {
-      "id" : "6GvtWcDNnJngdKzx3AWbQ",
-      "component" : "Dataset",
+    "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq" : {
+      "id" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
+      "component" : "Reformat",
       "metadata" : {
-        "label" : "s1_1",
-        "x" : -760,
-        "y" : -420,
+        "label" : "Reformat_1",
+        "x" : -240,
+        "y" : -520,
         "phase" : 0
       },
       "properties" : {
-        "writeOptions" : {
-          "writeMode" : "overwrite"
-        },
-        "table" : {
-          "name" : "s1",
-          "sourceType" : "Seed",
-          "alias" : ""
-        }
+        "columnsSelector" : [ "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z##First Name" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "`First Name`"
+          },
+          "alias" : "`First Name`",
+          "_row_id" : "NrKVUSSXto"
+        }, {
+          "expression" : {
+            "expression" : "{{ var('arrstr') }}"
+          },
+          "alias" : "c2",
+          "_row_id" : "GdQQhFrusD"
+        } ]
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "DVXktGB96FJSoGPYl8pg5",
-          "slug" : "in"
-        } ],
-        "outputs" : [ {
-          "id" : "-kY-uN9d9eT3eNar9ilmB",
+          "id" : "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z",
           "schema" : {
             "entityType" : "",
             "providerType" : "Databricks",
@@ -311,6 +147,58 @@
               }
             } ]
           },
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "8W06p9kygqDao5HEhGQR6$$YraauTkchGRSBmY0XC93t",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Databricks",
+            "fields" : [ {
+              "name" : "First Name",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c2",
+              "dataType" : {
+                "type" : "Array",
+                "dataType" : {
+                  "type" : "String"
+                }
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l" : {
+      "id" : "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l",
+      "component" : "Except",
+      "metadata" : {
+        "label" : "Except_1",
+        "x" : -700,
+        "y" : -800,
+        "phase" : 0
+      },
+      "properties" : {
+        "operationType" : "except",
+        "preserveDuplicates" : false,
+        "useMinus" : false,
+        "inputAliases" : [ "in0", "in1" ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "HgMlP15_6BFge4G6zrZdu$$sgIsjnKa8OeC9m1lMjSVm",
+          "slug" : "in0"
+        }, {
+          "id" : "xfoonahkl1OZeci_hq0Ye$$RXGhYZbVZniU5rOxSVoyl",
+          "slug" : "in1"
+        } ],
+        "outputs" : [ {
+          "id" : "5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH",
           "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
@@ -318,11 +206,11 @@
     }
   },
   "connections" : [ {
-    "id" : "d7MQJS6mzfhRj6l06HYhI$$E_-zghwnYRNMu6IR5Et5-",
-    "source" : "pcdQmq8ehfK0cEv3I2p2y$$fZGOC6pt9LcJodNl-CLZv",
-    "sourcePort" : "cDjenX8xLMKWSHGDTPpB6$$sdefQkLnAHGnkbY68LIad",
-    "target" : "03wLFrb7esYxW5ftzPLz4$$nLHMzms3fYI7UBC28aH_b",
-    "targetPort" : "znEBZTeXfiC5LnykbfFdj$$xWb4wlaSdlmV4TluFJJxN"
+    "id" : "gduqIC6CUSMd-jxYlMn2Y",
+    "source" : "ZaqpebQlUejl4rjRtYS0Z",
+    "sourcePort" : "i-OLuaXw8oIbJhTdt8EQW",
+    "target" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
+    "targetPort" : "WZa7lZW5nZqw823U2gPQS$$vozbZuklPc0aKp_Bgu19z"
   } ],
   "component" : "Pipeline"
 }

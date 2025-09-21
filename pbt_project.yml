@@ -203,28 +203,17 @@ sqlModels:
 sqlSnapshots: {}
 sqlTests: {}
 sqlMacros:
-  .prophecy/metadata/sqlmacros/g1:
-    name: g1
+  .prophecy/metadata/sqlmacros/g4:
+    name: g4
     macroType: query
     description: null
     author: somani.raghav@prophecy.io
     files:
-    - macros/g2.sql
-    - .prophecy/ide/macros/g1.json
+    - macros/g4.sql
+    - .prophecy/ide/macros/g4.json
     - macros/macros.yml
-    - gems/g1.py
-    createdAt: '2025-09-01 09:26:47'
-  .prophecy/metadata/sqlmacros/g2:
-    name: g2
-    macroType: query
-    description: null
-    author: somani.raghav@prophecy.io
-    files:
-    - macros/g2.sql
-    - .prophecy/ide/macros/g2.json
-    - macros/macros.yml
-    - gems/g2.py
-    createdAt: '2025-09-01 09:12:13'
+    - gems/g4.py
+    createdAt: '2025-09-03 11:16:59'
   .prophecy/metadata/sqlmacros/generate_schema_name:
     name: generate_schema_name
     macroType: expression
@@ -234,6 +223,16 @@ sqlMacros:
     - macros/generate_schema_name.sql
     - .prophecy/ide/macros/generate_schema_name.json
     createdAt: '2025-08-22 12:08:35'
+  .prophecy/metadata/sqlmacros/hello:
+    name: hello
+    macroType: expression
+    description: null
+    author: somani.raghav@prophecy.io
+    files:
+    - macros/hello.sql
+    - .prophecy/ide/macros/hello.json
+    - macros/macros.yml
+    createdAt: '2025-09-02 07:33:53'
   .prophecy/metadata/sqlmacros/prophecy_tmp_source:
     name: prophecy_tmp_source
     macroType: expression
@@ -298,10 +297,9 @@ sqlOrchestratorPipelines:
     description: null
     author: somani.raghav@prophecy.io
     files:
-    - models/p1/p1__Aggregate_1.sql
-    - models/p1/p1__DataCleansing_1.sql
+    - models/p1/p1__Except_1.sql
     - models/p1/schema.yml
-    - models/p1/p1__g1_1.sql
+    - models/p1/p1__Reformat_1.sql
     - .prophecy/ide/pipelines/p1.json
     - pipelines/p1.py
     createdAt: '2025-08-22 12:10:46'

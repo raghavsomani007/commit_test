@@ -6,12 +6,20 @@
   })
 }}
 
-WITH g1_1 AS (
+WITH Except_1 AS (
 
-  {{ test.g1(ref('s1') }}
+  SELECT * 
+  
+  FROM `` AS in0
+  
+  EXCEPT
+  
+  SELECT * 
+  
+  FROM `` AS in1
 
 )
 
 SELECT *
 
-FROM g1_1
+FROM Except_1
