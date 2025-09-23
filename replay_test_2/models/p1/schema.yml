@@ -1,0 +1,6 @@
+---
+version: 2
+models:
+- name: "p1__static_values"
+  tags:
+  - "prophecy_temp"
