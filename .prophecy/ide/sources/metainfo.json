@@ -53,12 +53,34 @@
   },
   "dependenciesContainer" : {
     "dependencies" : { },
+    "lastError" : "Building dependency project prophecy_basics failed. Could not validate Databricks fabric: Authentication failed, please check auth credentials.",
     "prophecyProjectDependencies" : {
-      "https://github.com/prophecy-io/databricks-sql-basics" : "12"
+      "https://github.com/prophecy-io/prophecy-basics" : "44"
+    },
+    "dependenciesMetadata" : {
+      "https://github.com/prophecy-io/prophecy-basics" : {
+        "autoUpgrade" : true
+      }
     }
   },
   "entitiesToSync" : [ {
     "name" : "m10",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m11",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m12",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m13",
+    "type" : "Model",
+    "syncedOnce" : true
+  }, {
+    "name" : "m14",
     "type" : "Model",
     "syncedOnce" : true
   }, {

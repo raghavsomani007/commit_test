@@ -1,0 +1,6 @@
+---
+version: 2
+macros:
+- name: "h2"
+  arguments: []
+  macroType: "expression"

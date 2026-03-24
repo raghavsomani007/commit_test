@@ -63,21 +63,6 @@
         } ],
         "outputs" : [ {
           "id" : "i-OLuaXw8oIbJhTdt8EQW",
-          "schema" : {
-            "entityType" : "",
-            "providerType" : "Databricks",
-            "fields" : [ {
-              "name" : "First Name",
-              "dataType" : {
-                "type" : "String"
-              }
-            }, {
-              "name" : "Last Name",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
           "slug" : "out",
           "dataExplorerProps" : {
             "sorts" : [ ],
@@ -100,6 +85,37 @@
               } ]
             }
           }
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "GZ3e4Jh40130Hw6anvZAv" : {
+      "id" : "GZ3e4Jh40130Hw6anvZAv",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "s1_1",
+        "x" : -700,
+        "y" : -280,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "UtUkbtgJUpFE_tHw5wnCR",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "UI4HGTZPgajgYbfx5ym76",
+          "slug" : "out"
         } ],
         "isCustomOutputSchema" : false
       }
@@ -131,6 +147,188 @@
         "isCustomOutputSchema" : false
       }
     },
+    "R5QXQAA9H0_eJDFdSDa-P$$5oe5KU0hy9LjtQXwGTvr8" : {
+      "id" : "R5QXQAA9H0_eJDFdSDa-P$$5oe5KU0hy9LjtQXwGTvr8",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "Pipeline_1",
+        "x" : -740,
+        "y" : -760,
+        "phase" : 0
+      },
+      "properties" : {
+        "maxTriggers" : 10000,
+        "triggerCondition" : "Always",
+        "enableMaxTriggers" : false,
+        "pipelineName" : "p1",
+        "parameters" : { }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "RFXa0r2at1BiwTcByJ1zw$$LYk9qO8W4HjOJEvV1ErrD",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+          "slug" : "out0"
+        } ]
+      }
+    },
+    "epm-_6iwaTpBTqP6OiQIk$$oBELSEiYDC-PS1aDe81fA" : {
+      "id" : "epm-_6iwaTpBTqP6OiQIk$$oBELSEiYDC-PS1aDe81fA",
+      "component" : "OrchestrationTarget",
+      "kind" : "DatabricksVolumeTarget",
+      "metadata" : {
+        "label" : "input_csv",
+        "x" : -140,
+        "y" : -700,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "databricks",
+          "properties" : {
+            "id" : "databricks_1"
+          },
+          "type" : "connector"
+        },
+        "properties" : {
+          "filePath" : {
+            "type" : "concat_operation",
+            "properties" : {
+              "elements" : [ {
+                "type" : "literal",
+                "properties" : {
+                  "value" : "/hellow"
+                }
+              } ]
+            }
+          }
+        },
+        "format" : {
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "",
+            "encoding" : "UTF-8",
+            "header" : true
+          },
+          "kind" : "csv",
+          "category" : "file"
+        },
+        "isNew" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "OUK6vHHp9FCR1DkjG13aE$$sD1Up1eToAKqLULypGHMw",
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci" : {
+      "id" : "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "Pipeline_1"
+      },
+      "properties" : {
+        "label" : "Pipeline_1",
+        "table" : {
+          "name" : "{{ prophecy_tmp_source('p1', 'Pipeline_1') }}",
+          "sourceType" : "UnreferencedSource"
+        }
+      },
+      "visualMetaInfo" : {
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_zyR33jQS",
+          "slug" : "input_port_r7THacaE"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_o4LWm33i",
+          "slug" : "output_port_TnTL9Xzv"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "u986pQ0Yj09GSMNUCdlq-$$KNFeWW9gD0ZnEUhCTq9W4" : {
+      "id" : "u986pQ0Yj09GSMNUCdlq-$$KNFeWW9gD0ZnEUhCTq9W4",
+      "component" : "OrchestrationTarget",
+      "kind" : "OnedriveTarget",
+      "metadata" : {
+        "label" : "OrchestrationTarget_1",
+        "x" : -280,
+        "y" : -700,
+        "phase" : 0
+      },
+      "properties" : {
+        "connector" : {
+          "kind" : "onedrive",
+          "properties" : { },
+          "type" : "connector"
+        },
+        "properties" : { },
+        "format" : {
+          "properties" : {
+            "allowLazyQuotes" : false,
+            "allowEmptyColumnNames" : true,
+            "separator" : ",",
+            "nullValue" : "",
+            "encoding" : "UTF-8",
+            "header" : true
+          },
+          "kind" : "csv",
+          "category" : "file"
+        },
+        "isNew" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "EY-1Qyf-S0mhtqDxnbt5S$$9Z6dmuffZO01B2Xp6gQxl",
+          "slug" : "in"
+        } ],
+        "outputs" : [ ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "scBeMCiOcX5woILJpTtfU$$JLWGEPKo9chDJ53fOi7TP" : {
+      "id" : "scBeMCiOcX5woILJpTtfU$$JLWGEPKo9chDJ53fOi7TP",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "catalog_tags",
+        "x" : -420,
+        "y" : -700,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "catalog_tags",
+          "sourceType" : "Table",
+          "sourceName" : "raghav.information_schema",
+          "alias" : "",
+          "additionalProperties" : null
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Lidpao_2YvJkTkKQC85m6$$kMy37cOdzpSJYg4fu8GOt",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "J5YnwRQUzdvDGkgBoQnC6$$mxlQm5m4AG1JoLS9rlP2-",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
     "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l" : {
       "id" : "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l",
       "component" : "Model",
@@ -142,26 +340,72 @@
         "modelName" : "p1__Except_1"
       },
       "visualMetaInfo" : {
-        "visualProcessIds" : [ "Except_1_5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH", "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l" ],
+        "visualProcessIds" : [ "Except_1_5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH", "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l", "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci" ],
         "type" : "ephemeral",
         "isTemporaryTable" : true
       },
       "ports" : {
-        "inputs" : [ ],
+        "inputs" : [ {
+          "id" : "p1__Except_1_in_0",
+          "slug" : "in_0"
+        } ],
         "outputs" : [ {
           "id" : "p1__Except_1_out_0",
           "slug" : "out_0"
         } ],
         "isCustomOutputSchema" : false
       }
+    },
+    "CyOj-FttFs5TaGhjXjcRS" : {
+      "id" : "CyOj-FttFs5TaGhjXjcRS",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "s1_2",
+        "x" : -980,
+        "y" : -980,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "3AvC0zxilPDGlV-Y1wXEA",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "OYQHikzOohDT-_kJZYGUD",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
     }
   },
   "connections" : [ {
+    "id" : "conn_R5QXQAA9H0_eJDFdSDa-P$$5oe5KU0hy9LjtQXwGTvr8_Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci_iDRJmoix",
+    "source" : "R5QXQAA9H0_eJDFdSDa-P$$5oe5KU0hy9LjtQXwGTvr8",
+    "sourcePort" : "HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+    "target" : "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+    "targetPort" : "input_port_zyR33jQS"
+  }, {
     "id" : "gduqIC6CUSMd-jxYlMn2Y",
     "source" : "ZaqpebQlUejl4rjRtYS0Z",
     "sourcePort" : "i-OLuaXw8oIbJhTdt8EQW",
     "target" : "lOfnWS5JeXruryngtThyV$$IYWqD7respv25by2y2tHq",
     "targetPort" : "p1__Reformat_1_in_0"
+  }, {
+    "id" : "wHb6CUPG3pu_atPf2b6KZ$$6ab-72XqVantK6gksRpKs",
+    "source" : "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+    "sourcePort" : "output_port_o4LWm33i",
+    "target" : "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l",
+    "targetPort" : "p1__Except_1_in_0"
   } ],
   "component" : "Pipeline"
 }

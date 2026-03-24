@@ -1,0 +1,13 @@
+{
+  "m1" : {
+    "name" : "m1",
+    "macroType" : "expression",
+    "definition" : "",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ ]
+    },
+    "staleState" : "none",
+    "version" : 0
+  }
+}

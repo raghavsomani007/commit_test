@@ -1,0 +1,140 @@
+{
+  "id" : "p2",
+  "metainfo" : {
+    "label" : "p2",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedule" : {
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false
+    },
+    "sensorSchedule" : {
+      "enabled" : false,
+      "isDefaultView" : false,
+      "triggers" : { }
+    },
+    "isTranspiledPipeline" : false
+  },
+  "processes" : {
+    "uYxmmr29x0lbILtVYyUlo" : {
+      "id" : "uYxmmr29x0lbILtVYyUlo",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "s1",
+        "x" : -140,
+        "y" : 0,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        },
+        "table" : {
+          "name" : "s1",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "cVL3XAoC0f5Vb9mptZvAG",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "8rXjYFaPkgHR5IlqDt4c7",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "GDMeiHDg5pCv_XU4GLqw0$$OBtLQg5iLSP9Y9qBAhIAr" : {
+      "id" : "GDMeiHDg5pCv_XU4GLqw0$$OBtLQg5iLSP9Y9qBAhIAr",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "Table_2",
+        "x" : -140,
+        "y" : -280,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "JL1kdTAg3Gm0OiJhfQ34c$$c9bkYwDU_JSVfQLiQCFHb",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "ioL_v5DV2-KPLRrE2fRXB$$bV2X06Kv4gpY528fQAJRW",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "_J4JnGr_uTsO4wXNWtQul$$b_UaG-H8ho-KyBb9DyD6r" : {
+      "id" : "_J4JnGr_uTsO4wXNWtQul$$b_UaG-H8ho-KyBb9DyD6r",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "p2__SQLStatement_0",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "p2__SQLStatement_0"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "SQLStatement_0_0NpdB0zNnep-OV7WSFWKK$$rTjwmNtsBCJriF_yKAvC2", "_J4JnGr_uTsO4wXNWtQul$$b_UaG-H8ho-KyBb9DyD6r" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "p2__SQLStatement_0_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    },
+    "zHPzX1Ckm_9jD__xCSV6E$$P1iPwXLcHEf840Nmx7rr4" : {
+      "id" : "zHPzX1Ckm_9jD__xCSV6E$$P1iPwXLcHEf840Nmx7rr4",
+      "component" : "Dataset",
+      "metadata" : {
+        "label" : "Table_1",
+        "x" : -140,
+        "y" : -140,
+        "phase" : 0
+      },
+      "properties" : {
+        "writeOptions" : {
+          "writeMode" : "overwrite"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "GyS6gbrjjDNfpPgVMMmsd$$x_9fHzDTurEWRBkLsXSFf",
+          "slug" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "sDgXbDU0WSdzdwWCg3ITf$$2kvHgGznFVq2uuJ_gzH0F",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

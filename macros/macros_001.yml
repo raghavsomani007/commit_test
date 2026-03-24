@@ -1,0 +1,6 @@
+---
+version: 2
+macros:
+- name: "m1"
+  arguments: []
+  macroType: "expression"

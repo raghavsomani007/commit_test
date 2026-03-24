@@ -1,0 +1,62 @@
+{
+  "id" : "p3",
+  "metainfo" : {
+    "label" : "p3",
+    "autoLayout" : false,
+    "version" : 1,
+    "configuration" : {
+      "schema" : {
+        "type" : "record",
+        "fields" : [ ]
+      }
+    },
+    "schedules" : [ {
+      "name" : "Schedule 1",
+      "scheduleType" : "cron",
+      "cron" : "* 0 2 * * * *",
+      "timeZone" : "GMT",
+      "emailOnSuccess" : false,
+      "emailOnFailure" : false,
+      "emailOnStart" : false,
+      "emails" : [ "email@gmail.com" ],
+      "enabled" : false,
+      "triggers" : { }
+    } ],
+    "isTranspiledPipeline" : false,
+    "publishDiagnosticMetrics" : false,
+    "processesVsModelFiles" : {
+      "Join_1__IOhV2o3WhzIjJWqWWdQ6$$XZT3IG-QRjo3JvtZeI1Cl" : "models/p3/p3__Join_1.sql",
+      "0G7R6I5Z0DBJTLPYa5Zq0$$c-P1mIcc6N5EXkmdRV0bw" : "models/p3/p3__Join_1.sql",
+      "Ex23kTt9Vig0xlR3UPUvl$$0My1hYF-Bh2RJI7I96ENv" : "models/p3/p3__Join_1.sql",
+      "LayYMizSXBdAMGr0W51sH$$N9rWHwWVemSYHZcHujSkI" : "models/p3/p3__Join_1.sql"
+    }
+  },
+  "processes" : {
+    "0G7R6I5Z0DBJTLPYa5Zq0$$c-P1mIcc6N5EXkmdRV0bw" : {
+      "id" : "0G7R6I5Z0DBJTLPYa5Zq0$$c-P1mIcc6N5EXkmdRV0bw",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "p3__Join_1",
+        "phase" : 0
+      },
+      "properties" : {
+        "modelName" : "p3__Join_1"
+      },
+      "visualMetaInfo" : {
+        "visualProcessIds" : [ "Join_1__IOhV2o3WhzIjJWqWWdQ6$$XZT3IG-QRjo3JvtZeI1Cl", "0G7R6I5Z0DBJTLPYa5Zq0$$c-P1mIcc6N5EXkmdRV0bw", "LayYMizSXBdAMGr0W51sH$$N9rWHwWVemSYHZcHujSkI", "Ex23kTt9Vig0xlR3UPUvl$$0My1hYF-Bh2RJI7I96ENv" ],
+        "type" : "ephemeral",
+        "isTemporaryTable" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "p3__Join_1_out_0",
+          "slug" : "out_0"
+        } ],
+        "isCustomOutputSchema" : false
+      }
+    }
+  },
+  "connections" : [ ],
+  "component" : "Pipeline"
+}

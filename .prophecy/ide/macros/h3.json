@@ -1,0 +1,29 @@
+{
+  "h3" : {
+    "name" : "h3",
+    "macroType" : "expression",
+    "definition" : "",
+    "parameters" : {
+      "type" : "record",
+      "fields" : [ ]
+    },
+    "staleState" : "none",
+    "propertiesFile" : {
+      "name" : "hellw",
+      "content" : "---\nversion: 2\nmacros:\n- name: \"h3\"\n  arguments: []\n  macroType: \"expression\"\n",
+      "path" : "test/macros/hellw/hellw.yml",
+      "projectConfiguration" : null,
+      "folderConfiguration" : {
+        "version" : 2,
+        "macros" : [ {
+          "name" : "h3",
+          "arguments" : [ ],
+          "macroType" : "expression"
+        } ]
+      },
+      "packagesYml" : null,
+      "editable" : true
+    },
+    "version" : 0
+  }
+}

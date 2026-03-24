@@ -6,5 +6,15 @@ sources:
   schema: "information_schema"
   tables:
   - name: "catalog_tags"
+    config:
+      tags:
+      - "pipeline:p1"
+    columns: []
+    type: "table"
+- name: "main.information_schema"
+  database: "main"
+  schema: "information_schema"
+  tables:
+  - name: "check_constraints"
     columns: []
     type: "table"

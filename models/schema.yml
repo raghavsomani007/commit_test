@@ -1,12 +1,6 @@
 ---
 version: 2
 models:
-- name: "m1"
-  columns:
-  - name: "First Name"
-    dataType:
-      type: "String"
-  tests: []
 - name: "m2"
   columns:
   - name: "First Name"
@@ -59,6 +53,42 @@ models:
       type: "String"
   tests: []
 - name: "m7"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m11"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m12"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m13"
+  columns:
+  - name: "First Name"
+    dataType:
+      type: "String"
+  - name: "Last Name"
+    dataType:
+      type: "String"
+  tests: []
+- name: "m14"
   columns:
   - name: "First Name"
     dataType:

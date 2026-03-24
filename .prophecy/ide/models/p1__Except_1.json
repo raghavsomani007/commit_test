@@ -37,12 +37,12 @@
       },
       "ports" : {
         "inputs" : [ {
-          "id" : "input_port_0",
-          "slug" : "input_port_0"
+          "id" : "input_port_AhczZnJO",
+          "slug" : "input_port_enLrC3Fb"
         } ],
         "outputs" : [ {
-          "id" : "output_port_0",
-          "slug" : "output_port_0"
+          "id" : "output_port_SgN2i3jy",
+          "slug" : "output_port_VLwuU2W2"
         } ],
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
@@ -78,14 +78,47 @@
         "isCustomOutputSchema" : false,
         "autoUpdateOnRun" : false
       }
+    },
+    "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci" : {
+      "id" : "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "Pipeline_1"
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "output_port_TnTL9Xzv",
+          "id" : "output_port_TnTL9Xzv",
+          "language" : "sql",
+          "content" : "\nSELECT *\n\nFROM {{ prophecy_tmp_source('p1', 'Pipeline_1') }}\n\n"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "input_port_zyR33jQS",
+          "slug" : "input_port_r7THacaE"
+        } ],
+        "outputs" : [ {
+          "id" : "output_port_o4LWm33i",
+          "slug" : "output_port_TnTL9Xzv"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
     }
   },
   "connections" : [ {
-    "id" : "conn_sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l_Except_1_5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH",
+    "id" : "conn_sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l_Except_1_5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH_Zuvx4zgR",
     "source" : "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l",
     "sourcePort" : "5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH",
     "target" : "Except_1_5Cebu35V5n4I9OFYtTn2Q$$ombaIZVegTbUFm18jKLiH",
-    "targetPort" : "input_port_0"
+    "targetPort" : "input_port_AhczZnJO"
+  }, {
+    "id" : "wHb6CUPG3pu_atPf2b6KZ$$6ab-72XqVantK6gksRpKs",
+    "source" : "Pipeline_1_HKOMB3RrZhWzRDAlUAj5u$$kNRAzI1Q22Ce6aVwRu1ci",
+    "sourcePort" : "output_port_o4LWm33i",
+    "target" : "sZ05ZOswkjirKZVaIfGSC$$f5MMD32wW1wwpseRuhF4l",
+    "targetPort" : "HgMlP15_6BFge4G6zrZdu$$sgIsjnKa8OeC9m1lMjSVm"
   } ],
   "component" : "Model"
 }

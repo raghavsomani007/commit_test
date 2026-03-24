@@ -1,0 +1,9 @@
+---
+version: 2
+dataTests:
+- name: "t2"
+  arguments:
+  - name: "First Name"
+    type: "column"
+    description: "{\"ProphecyType\": \"column\"}"
+  type: "generic"
